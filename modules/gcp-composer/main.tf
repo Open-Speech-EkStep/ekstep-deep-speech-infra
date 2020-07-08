@@ -6,12 +6,12 @@ provider "google" {
 
 resource "google_composer_environment" "composer" {
   name   = var.composer_env_name
-  region = "us-east1"
+  region = var.region
   config {
     node_count = 3
 
     node_config {
-      zone         = "us-east1-b"
+      zone         = var.zone_name
       machine_type = "n1-standard-1"
       disk_size_gb = "20"
     }
