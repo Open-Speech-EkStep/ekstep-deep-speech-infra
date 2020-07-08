@@ -4,11 +4,11 @@ default = "ekstepspeechrecognition"
 }
 
 variable "composer_env_name" {
-description = "The name of the Google Cloud Project."
+description = "The name of the Google composer_env_name."
 default = "testcom"
 }
 
 variable "script_path" {
-description = "The name of the Google Cloud Project."
+description = "The path of the working dir."
 default = "./modules/gcp-composer/"
 }
