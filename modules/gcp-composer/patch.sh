@@ -2,7 +2,7 @@
 
 LOCATION="us-east1"
 ZONE="us-east1-b"
-COMPOSER_ENV_NAME="testcom"
+COMPOSER_ENV_NAME="ekstepcomposer"
 PROJECT="ekstepspeechrecognition"
 
 composer=$(gcloud composer environments describe $COMPOSER_ENV_NAME --location $LOCATION | grep  "gkeCluster" | cut -d '/' -f 6-)

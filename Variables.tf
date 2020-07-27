@@ -5,7 +5,7 @@ default = "ekstepspeechrecognition"
 
 variable "composer_env_name" {
 description = "The name of the Google composer_env_name."
-default = "testcom"
+default = "ekstepcomposer"
 }
 
 variable "script_path" {

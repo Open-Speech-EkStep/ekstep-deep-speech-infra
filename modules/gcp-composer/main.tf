@@ -19,6 +19,7 @@ resource "google_composer_environment" "composer" {
       airflow_config_overrides = {
         core-load_example = "True"
       }
+      image_version= "composer-1.10.6-airflow-1.10.6"
 
       pypi_packages = {
         google-cloud-storage = "==1.17"
