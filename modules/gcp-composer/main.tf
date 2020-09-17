@@ -24,6 +24,7 @@ resource "google_composer_environment" "composer" {
       pypi_packages = {
         google-cloud-storage = "==1.17"
         gs-wrap = ""
+        xlsxwriter = ""
       }
       python_version = 3
     }
