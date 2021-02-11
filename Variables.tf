@@ -15,7 +15,7 @@ variable "script_path" {
 
 variable "bucket_name" {
   description = "The name of the gcp bucket"
-  default = "ekstepspeechrecognition2"
+  default = "ekstepspeechrecognition"
 }
 
 
@@ -28,7 +28,7 @@ variable "database_version" {
 variable "database_instance_name" {
   description = "The name of the database_instance."
   type = string
-  default = "crowdsourcedb5"
+  default = "crowdsourcedb"
 }
 
 variable "db_region" {
@@ -52,13 +52,13 @@ variable "database2" {
 variable "speechrecognition_service_account" {
   description = "The name of the speechrecognition_service_account."
   type = string
-  default = "servacct-speechrecognition3com"
+  default = "servacct-speechrecognitioncom"
 }
 
 variable "circleci_service_account" {
   description = "The name of the circleci_service_account."
   type = string
-  default = "servacct-circleci3"
+  default = "servacct-circleci"
 }
 
 variable "sql_instance_size" {
