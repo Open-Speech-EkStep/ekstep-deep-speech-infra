@@ -5,18 +5,18 @@ provider "google" {
 }
 
 resource "google_sql_database" "database1" {
-  name     = var.database1
+  name     = terraform.workspace=="prod" ? var.database1 : "${var.database1}-${terraform.workspace}"
   instance = google_sql_database_instance.instance.name
 }
 
 resource "google_sql_database" "database2" {
-  name     = var.database2
+  name     = terraform.workspace=="prod" ? var.database2 : "${var.database2}-${terraform.workspace}"
   instance = google_sql_database_instance.instance.name
 }
 
 
 resource "google_sql_database_instance" "instance" {
-  name   = var.database_instance_name
+  name   = "${var.database_instance_name}-${terraform.workspace}"
   region = var.db_region
   database_version = var.database_version
   settings {

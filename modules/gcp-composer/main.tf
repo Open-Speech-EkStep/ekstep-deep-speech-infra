@@ -5,7 +5,7 @@ provider "google" {
 
 
 resource "google_composer_environment" "composer" {
-  name   = var.composer_env_name
+  name   = "${var.composer_env_name}-${terraform.workspace}"
   region = var.region
   config {
     node_count = 3
