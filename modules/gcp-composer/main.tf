@@ -25,6 +25,7 @@ resource "google_composer_environment" "composer" {
         google-cloud-storage = "==1.17"
         gs-wrap = ""
         xlsxwriter = ""
+        google-cloud-core = "==1.3.0"
       }
       python_version = 3
     }
