@@ -5,19 +5,23 @@ provider "google" {
 
 
 resource "google_composer_environment" "composer" {
-  name   = "${var.composer_env_name}-${terraform.workspace}"
+  name   = "${var.composer_env_name}"
   region = var.region
   config {
     node_count = 3
 
     node_config {
       zone         = var.zone_name
-      machine_type = "n1-standard-1"
-      disk_size_gb = "20"
+      machine_type = "n2-standard-4"
+      disk_size_gb = "100"
     }
     software_config {
       airflow_config_overrides = {
         core-load_example = "True"
+        core-dag_concurrency = "150"
+        core-parallelism = "150"
+        core-max_active_runs_per_dag = "1"
+        celery-worker_concurrency = "15"
       }
       image_version= "composer-1.10.6-airflow-1.10.6"
 
