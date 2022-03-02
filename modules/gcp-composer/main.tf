@@ -23,13 +23,13 @@ resource "google_composer_environment" "composer" {
         core-max_active_runs_per_dag = "1"
         celery-worker_concurrency = "15"
       }
-      image_version= "composer-1.10.6-airflow-1.10.6"
+      image_version= "composer-1.18.1-airflow-1.10.15"
 
       pypi_packages = {
-        google-cloud-storage = "==1.17"
+        google-cloud-storage = "==1.32"
         gs-wrap = ""
         xlsxwriter = ""
-        google-cloud-core = "==1.3.0"
+        google-cloud-core = "==1.4.1"
       }
       python_version = 3
     }
